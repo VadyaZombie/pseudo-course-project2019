@@ -1,5 +1,6 @@
 const BaseController = require('./baseController');
 const UserService = require('../services/userService');
+const jwt = require('jsonwebtoken');
 
 
 class UserController extends BaseController {
