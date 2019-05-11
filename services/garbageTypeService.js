@@ -1,15 +1,15 @@
-const DepartmentModel = require('../models/departmentModel');
+const GarbageTypeModel = require('../models/garbageTypeModel');
 const BaseMethods = require('./dataProcessingService');
 const BaseService = require('./baseService');
 
-class DepartmentService extends BaseService{
+class GarbageTypeService extends BaseService{
     constructor(tableName) {
         super(tableName);
         this.baseMethods = new BaseMethods();
-        this.departmentModel = new DepartmentModel(tableName);
+        this.garbageTypeModel = new GarbageTypeModel(tableName);
     }
 
 
 }
 
-module.exports = DepartmentService;
+module.exports = GarbageTypeService;

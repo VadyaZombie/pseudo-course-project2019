@@ -7,6 +7,7 @@ const departmentController = new DepartmentController(departmentTableName);
 
 //router.post('/', bodyHandler.bodyIsJSON())
 
+
 router.post('/', departmentController.insertOne);
 router.get('/:id', departmentController.selectById);
 router.get('/', departmentController.selectAll);

@@ -1,15 +1,15 @@
-const DepartmentModel = require('../models/departmentModel');
+const UserModel = require('../models/userModel');
 const BaseMethods = require('./dataProcessingService');
 const BaseService = require('./baseService');
 
-class DepartmentService extends BaseService{
+class UserService extends BaseService{
     constructor(tableName) {
         super(tableName);
         this.baseMethods = new BaseMethods();
-        this.departmentModel = new DepartmentModel(tableName);
+        this.userModel = new UserModel(tableName);
     }
 
 
 }
 
-module.exports = DepartmentService;
+module.exports = UserService;

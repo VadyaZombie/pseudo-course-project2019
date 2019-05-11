@@ -1,15 +1,15 @@
-const DepartmentModel = require('../models/departmentModel');
+const BinModel = require('../models/binModel');
 const BaseMethods = require('./dataProcessingService');
 const BaseService = require('./baseService');
 
-class DepartmentService extends BaseService{
+class BinService extends BaseService{
     constructor(tableName) {
         super(tableName);
         this.baseMethods = new BaseMethods();
-        this.departmentModel = new DepartmentModel(tableName);
+        this.binModel = new BinModel(tableName);
     }
 
 
 }
 
-module.exports = DepartmentService;
+module.exports = BinService;
