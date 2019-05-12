@@ -1,6 +1,8 @@
 const UserModel = require('../models/userModel');
 const BaseMethods = require('./dataProcessingService');
 const BaseService = require('./baseService');
+const jwt = require('jsonwebtoken');
+const {secretKeyForTokens} = require('../config');
 
 class UserService extends BaseService{
     constructor(tableName) {
@@ -10,6 +12,11 @@ class UserService extends BaseService{
     }
 
 
+    async registration(content) {
+        let token = await this.baseMethods.createToken(content.email);
+        console.log('this is result' , token)
+        return token;
+    }
 }
 
 module.exports = UserService;

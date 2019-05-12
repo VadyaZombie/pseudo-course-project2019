@@ -1,5 +1,7 @@
-class BaseMethods {
+const {secretKeyForTokens} = require('../config');
+const jwt = require('jsonwebtoken');
 
+class BaseMethods {
     async prepareDataForInsertOne(content) {
         let strOfColNames = '';
         let strOfColValues = '';
@@ -31,6 +33,30 @@ class BaseMethods {
             }
         }
         return await {strForUpdate : result};
+    }
+
+    async getCurrDateTimeForToken(){
+        let result = [];
+        let DateTime = new Date()
+
+        result.push(DateTime.getFullYear());
+        result.push(DateTime.getMonth());
+        result.push(DateTime.getDay());
+        result.push(DateTime.getHours());
+        result.push(DateTime.getMinutes());
+        result.push(DateTime.getSeconds());
+
+        console.log(result.join('-'));
+        return result.join('-');
+    }
+
+    async createToken(str){
+        let currDate = await this.getCurrDateTimeForToken();
+        let strForToken = currDate.concat(str);
+        let result = await jwt.sign(strForToken, secretKeyForTokens);
+        console.log(result);
+        return result;
+
     }
 
 

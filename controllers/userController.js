@@ -13,8 +13,8 @@ class UserController extends BaseController {
 
     async registration(req, res) {
         try {
-            //let result = await this.benefitsService.selectByBenefitLevelId(req.params.id);
-            let result = 'OK';
+            let result = await this.userService.registration(req.body);
+            //let result = 'OK';
             console.log(result);
             await res.status(200).json({success: true, data: result});
         } catch (error) {
