@@ -1,8 +1,7 @@
 const UserModel = require('../models/userModel');
 const BaseMethods = require('./dataProcessingService');
 const BaseService = require('./baseService');
-const jwt = require('jsonwebtoken');
-const {secretKeyForTokens} = require('../config');
+
 
 class UserService extends BaseService{
     constructor(tableName) {
