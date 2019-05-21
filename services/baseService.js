@@ -16,7 +16,6 @@ class BaseService {
     }
 
     async selectById(id) {
-        //content = await this.baseMethods.prepareDataForSelectById(content);
         return await this.baseModel.selectById(id);
     }
 
@@ -32,12 +31,6 @@ class BaseService {
     async deleteById(id) {
         return await this.baseModel.deleteById(id);
     }
-
-    // async updateById() {
-    //     return await this.baseModel.selectAll();
-    // }
-
-
 
 }
 

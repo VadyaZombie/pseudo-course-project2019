@@ -1,11 +1,16 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const db = require('./dbConnect');
+const redis = require('./redisConnect');
 const routers = require('./routes/routers');
 
 const app = express();
 
 db.getConnectionDb();
+redis.getConnectionToRedis();
+
+
+
 app.listen(3000, () => console.log('App listen'));
 
 app.use(bodyParser.json());

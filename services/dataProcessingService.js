@@ -35,7 +35,7 @@ class BaseMethods {
         return await {strForUpdate : result};
     }
 
-    async getCurrDateTimeForToken(){
+    getCurrDateTimeForToken(){
         let result = [];
         let DateTime = new Date()
 
@@ -56,8 +56,15 @@ class BaseMethods {
         let result = await jwt.sign(strForToken, secretKeyForTokens);
         console.log(result);
         return result;
-
     }
+
+    async prepareDataAboutUserBeforeSendRes(content){
+        let result = content;
+        delete result['user_id'];
+        delete result['password'];
+        return result;
+    }
+    
 
 
 }

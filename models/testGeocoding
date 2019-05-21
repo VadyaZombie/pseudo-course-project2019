@@ -1,0 +1,76 @@
+{
+    "results": [{
+        "address_components": [{
+                "long_name": "118",
+                "short_name": "118",
+                "types": ["street_number"]
+            },
+            {
+                "long_name": "проспект Олександрівський",
+                "short_name": "проспект Олександрівський",
+                "types": ["route"]
+            },
+            {
+                "long_name": "Індустріальний район",
+                "short_name": "Індустріальний район",
+                "types": ["political", "sublocality", "sublocality_level_1"]
+            },
+            {
+                "long_name": "Харків",
+                "short_name": "Харків",
+                "types": ["locality", "political"]
+            },
+            {
+                "long_name": "Харківська міськрада",
+                "short_name": "Харківська міськрада",
+                "types": ["administrative_area_level_3", "political"]
+            },
+            {
+                "long_name": "Харківська область",
+                "short_name": "Харківська область",
+                "types": ["administrative_area_level_1", "political"]
+            },
+            {
+                "long_name": "Украина",
+                "short_name": "UA",
+                "types": ["country", "political"]
+            },
+            {
+                "long_name": "61000",
+                "short_name": "61000",
+                "types": ["postal_code"]
+            }
+        ],
+        "formatted_address": "проспект Олександрівський, 118, Харків, Харківська область, Украина, 61000",
+        "geometry": {
+            "bounds": {
+                "northeast": {
+                    "lat": 49.94535,
+                    "lng": 36.3604771
+                },
+                "southwest": {
+                    "lat": 49.944484,
+                    "lng": 36.36028599999999
+                }
+            },
+            "location": {
+                "lat": 49.9448496,
+                "lng": 36.3603953
+            },
+            "location_type": "ROOFTOP",
+            "viewport": {
+                "northeast": {
+                    "lat": 49.9462659802915,
+                    "lng": 36.3617305302915
+                },
+                "southwest": {
+                    "lat": 49.9435680197085,
+                    "lng": 36.3590325697085
+                }
+            }
+        },
+        "place_id": "ChIJFxQ1qZkLJ0ERfmpVomvL6lc",
+        "types": ["premise"]
+    }],
+    "status": "OK"
+}
