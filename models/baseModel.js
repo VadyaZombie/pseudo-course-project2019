@@ -19,7 +19,7 @@ class BaseModel {
         let query = await util.promisify(connection.query).bind(connection);
         console.log(`SELECT * FROM ${this.tableName} WHERE ${idNames[this.tableName]} = ${id}`);
         let result = await query(`SELECT * FROM ${this.tableName} WHERE ${idNames[this.tableName]} = ${id}`);
-        return await result;
+        return await result[0];
     }
 
     async selectAll() {

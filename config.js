@@ -31,6 +31,7 @@ const idNames = {
   'benefit' : 'benefit_id'
 }
 
+const secretKeyForTokens = 'fishman';
 
 module.exports = {
   dbName,
@@ -46,5 +47,6 @@ module.exports = {
   benefitsTableName,
   benefitTableName,
   idNames,
+  secretKeyForTokens
 
 };

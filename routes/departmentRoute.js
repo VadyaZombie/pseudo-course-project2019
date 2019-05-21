@@ -15,4 +15,7 @@ router.patch('/:id', departmentController.updateById);
 router.put('/:id', departmentController.updateById);
 router.delete('/:id', departmentController.deleteById);
 
+router.get('/:id/allCP' , departmentController.getAllCPByDEpartmentId);
+router.post('/test/test' , departmentController.testtest);
+
 module.exports = router;

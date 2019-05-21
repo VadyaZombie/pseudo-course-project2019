@@ -9,6 +9,9 @@ class CollectionPointService extends BaseService{
         this.collectionPointModel = new CollectionPointModel(tableName);
     }
 
+    async getCPByDepartmentId(department_id){
+        return await this.collectionPointModel.getCPByDepartmentId(department_id);
+    }
 
 }
 
