@@ -3,6 +3,8 @@ const bodyParser = require('body-parser');
 const db = require('./dbConnect');
 const redis = require('./redisConnect');
 const routers = require('./routes/routers');
+const    cors = require('cors')
+
 
 const app = express();
 
@@ -13,6 +15,7 @@ redis.getConnectionToRedis();
 
 app.listen(3000, () => console.log('App listen'));
 
+app.use(cors())
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
     extended: true

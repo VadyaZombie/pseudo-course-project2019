@@ -12,6 +12,7 @@ class UserModel extends BaseModel{
         let query = await util.promisify(connection.query).bind(connection);
         console.log(`SELECT * FROM ${this.tableName} WHERE email = '${email}'`);
         let result = await query(`SELECT * FROM ${this.tableName} WHERE email = '${email}'`);
+        console.log(result)
         return await result[0];
     }
 }

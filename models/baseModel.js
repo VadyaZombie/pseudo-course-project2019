@@ -10,6 +10,7 @@ class BaseModel {
     async insertOne(content) {
         let connection = await db.getDb();
         let query = await util.promisify(connection.query).bind(connection);
+        console.log(`INSERT INTO ${this.tableName} (${content.columnNames}) VALUES (${content.columnValues})`);
         let result = await query(`INSERT INTO ${this.tableName} (${content.columnNames}) VALUES (${content.columnValues})`);
         return await result.insertId;
     }

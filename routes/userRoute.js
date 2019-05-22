@@ -16,8 +16,11 @@ router.patch('/:id', bodyHandler.bodyIsJSON(), userController.updateById);
 router.put('/:id', bodyHandler.bodyIsJSON(), userController.updateById);
 router.delete('/:id', userController.deleteById);
 
+router.get('/isThisEmailBusy/:email', userController.isThisEmailBusy);
 router.post('/registration', bodyHandler.bodyIsJSON(), userController.registration);
 router.post('/auth', bodyHandler.bodyIsJSON(), userController.auth);
+router.get('/getUserByToken/:token', userController.getUserByToken);
+router.patch('/updatePersonalProfile/:token', userController.updatePersonalProfile)
 
 
 module.exports = router;
